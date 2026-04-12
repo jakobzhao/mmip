@@ -1,0 +1,105 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "case_001",
+        "name": "Sample Case A",
+        "year": 2017,
+        "status": "missing",
+        "county": "King County",
+        "tribal_affiliation": "Urban Indigenous community connections in Seattle",
+        "community_context": "Illustrative example of an urban MMIP record where tribal belonging, city policing, and county reporting systems do not align cleanly.",
+        "jurisdiction_context": "urban tribal-state overlap",
+        "policy_era": "pre-Savanna's Act",
+        "source": "UIHI",
+        "source_type": "community-report",
+        "confidence": "medium",
+        "location_precision": "generalized city-level location",
+        "record_visibility": "community-documented, limited official visibility",
+        "data_gap": "Potential racial misclassification across official records.",
+        "notes": "Generalized urban location for prototype only."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.3321, 47.6062]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "case_002",
+        "name": "Sample Case B",
+        "year": 2020,
+        "status": "unresolved",
+        "county": "Snohomish County",
+        "tribal_affiliation": "Coast Salish regional ties",
+        "community_context": "Illustrative record showing an unresolved case positioned between county administration and Indigenous community reporting networks.",
+        "jurisdiction_context": "county-state overlap",
+        "policy_era": "post-Savanna's Act",
+        "source": "Community archive",
+        "source_type": "advocacy-dataset",
+        "confidence": "low",
+        "location_precision": "approximate county-level location",
+        "record_visibility": "archival trace stronger than official case detail",
+        "data_gap": "Sparse public metadata and uncertain case-status harmonization.",
+        "notes": "Approximate county-level location."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.2021, 47.9789]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "case_003",
+        "name": "Sample Case C",
+        "year": 2022,
+        "status": "murdered",
+        "county": "Pierce County",
+        "tribal_affiliation": "Puyallup-area community context",
+        "community_context": "Illustrative case near reservation geography where county policing and tribal jurisdictional concerns may intersect unevenly.",
+        "jurisdiction_context": "tribal-county overlap",
+        "policy_era": "post-Savanna's Act",
+        "source": "Local reporting",
+        "source_type": "news",
+        "confidence": "medium",
+        "location_precision": "generalized metro-area location",
+        "record_visibility": "publicly reported but incomplete legal-geography context",
+        "data_gap": "Formal reporting may not capture Indigenous jurisdictional context.",
+        "notes": "Generalized metro-area location."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.4443, 47.2529]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "case_004",
+        "name": "Sample Case D",
+        "year": 2014,
+        "status": "missing",
+        "county": "Whatcom County",
+        "tribal_affiliation": "Northern borderlands Indigenous context",
+        "community_context": "Illustrative northern case highlighting border, county, and tribal spatial relationships in Western Washington.",
+        "jurisdiction_context": "border county and tribal context",
+        "policy_era": "pre-Savanna's Act",
+        "source": "Regional documentation",
+        "source_type": "mixed",
+        "confidence": "low",
+        "location_precision": "approximate regional location",
+        "record_visibility": "fragmented across regional documentation",
+        "data_gap": "Location and status remain uncertain in publicly accessible records.",
+        "notes": "Approximate location in northern Western Washington."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.4862, 48.7519]
+      }
+    }
+  ]
+}

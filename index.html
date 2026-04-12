@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MMIP Washington Web Map</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <aside class="sidebar">
+        <header class="hero">
+          <p class="eyebrow">Critical GIS / Public Research Map</p>
+          <h1>MMIP in Washington</h1>
+          <p class="subtitle">
+            A prototype GIS for Western Washington that layers MMIP cases with
+            tribal, county, and historical land-act geographies to make
+            jurisdictional fragmentation visible.
+          </p>
+        </header>
+
+        <section class="panel panel-intro">
+          <h2>Project Focus</h2>
+          <p>
+            This map is not a conventional crime dashboard. It uses layered GIS
+            evidence to show how MMIP cases sit inside overlapping tribal,
+            county, and state jurisdictions shaped by earlier land dispossession
+            and changing territorial control.
+          </p>
+          <p class="callout">
+            Native Land is displayed as a contextual narrative layer. It is not
+            equivalent to a formal legal jurisdiction boundary.
+          </p>
+        </section>
+
+        <section class="panel method-panel">
+          <h2>Why GIS Matters</h2>
+          <p>
+            One of the most important mitigation tools in the MMIP crisis is the
+            ability to visualize where legal responsibility, community presence,
+            and historical land change do not line up cleanly.
+          </p>
+          <p>
+            Comparing case locations with tribal lands, county lines, and land
+            acts helps researchers explain why records can disappear into gaps
+            between agencies rather than a single accountable system.
+          </p>
+        </section>
+
+        <section class="panel context-panel">
+          <h2>MMIP Context</h2>
+          <div class="context-grid">
+            <article class="context-card">
+              <span class="context-label">Visible cases</span>
+              <strong id="context-total">0</strong>
+              <p id="context-years">Awaiting data</p>
+            </article>
+            <article class="context-card">
+              <span class="context-label">Policy lens</span>
+              <strong id="context-policy">0 pre / 0 post</strong>
+              <p>Savanna's Act comparison across the current filter.</p>
+            </article>
+            <article class="context-card">
+              <span class="context-label">Data visibility</span>
+              <strong id="context-visibility">0 low-confidence</strong>
+              <p id="context-visibility-note">0 generalized locations</p>
+            </article>
+            <article class="context-card">
+              <span class="context-label">Jurisdiction setting</span>
+              <strong id="context-jurisdiction">No cases selected</strong>
+              <p>Tracks overlap across tribal, county, state, and urban settings.</p>
+            </article>
+          </div>
+          <p class="mini-note">
+            This prototype treats each case as a partial record: source type,
+            jurisdictional setting, location precision, and visibility gaps are
+            part of the dataset rather than side notes.
+          </p>
+        </section>
+
+        <section class="panel controls-panel">
+          <h2>Layers</h2>
+          <div class="toggle-list" id="layer-toggles">
+            <label class="toggle-item">
+              <input type="checkbox" data-layer-toggle="cases" checked />
+              <span>MMIP Cases</span>
+            </label>
+            <label class="toggle-item">
+              <input type="checkbox" data-layer-toggle="native-land" checked />
+              <span>Native Land</span>
+            </label>
+            <label class="toggle-item">
+              <input type="checkbox" data-layer-toggle="tribal-lands" checked />
+              <span>Tribal Lands</span>
+            </label>
+            <label class="toggle-item">
+              <input type="checkbox" data-layer-toggle="land-acts" checked />
+              <span>Historical Land Acts</span>
+            </label>
+            <label class="toggle-item">
+              <input type="checkbox" data-layer-toggle="counties" checked />
+              <span>County Boundaries</span>
+            </label>
+          </div>
+
+          <div class="control-group">
+            <div class="control-heading">
+              <h3>Year Filter</h3>
+              <output id="year-output">All years</output>
+            </div>
+            <input id="year-slider" type="range" min="0" max="0" step="1" value="0" />
+            <div class="slider-scale">
+              <span id="year-min">-</span>
+              <span id="year-max">-</span>
+            </div>
+            <button id="reset-year" class="ghost-button" type="button">Show all</button>
+          </div>
+
+          <div class="control-group">
+            <div class="control-heading">
+              <h3>Status Filter</h3>
+            </div>
+            <select id="status-filter">
+              <option value="all">All statuses</option>
+              <option value="missing">Missing</option>
+              <option value="murdered">Murdered</option>
+              <option value="unresolved">Unresolved</option>
+            </select>
+          </div>
+        </section>
+
+        <section class="panel legend-panel">
+          <h2>Legend</h2>
+          <ul class="legend-list">
+            <li><span class="legend-swatch cases"></span>MMIP case point</li>
+            <li><span class="legend-swatch native-land"></span>Native Land territory</li>
+            <li><span class="legend-swatch tribal-lands"></span>Tribal land boundary</li>
+            <li><span class="legend-swatch land-acts"></span>Historical land-act area</li>
+            <li><span class="legend-swatch counties"></span>County boundary</li>
+          </ul>
+        </section>
+
+        <section class="panel info-panel">
+          <h2>Selected Feature</h2>
+          <div id="feature-details" class="feature-details empty-state">
+            Click a case point or boundary area to inspect its attributes,
+            jurisdictional setting, source history, and contextual notes.
+          </div>
+        </section>
+
+        <footer class="panel footer-panel">
+          <h2>Data Notes</h2>
+          <p>
+            The bundled data is sample data for prototyping only. Case points
+            are generalized and should not be interpreted as precise incident
+            locations.
+          </p>
+          <p>
+            Historical land-act areas are interpretive research layers for
+            storytelling and comparison. They are not parcel-accurate legal
+            boundaries.
+          </p>
+          <p>
+            Replace the sample files in the <strong>data/</strong> folder with
+            research-validated GeoJSON before public release.
+          </p>
+        </footer>
+      </aside>
+
+      <main class="map-column">
+        <section class="map-header">
+          <div>
+            <p class="map-header-label">Washington State / Western Washington</p>
+            <h2>Interactive Map</h2>
+          </div>
+          <div class="map-header-meta">
+            <span id="case-count">0 visible cases</span>
+          </div>
+        </section>
+        <div id="map" aria-label="Interactive map of MMIP cases and contextual layers"></div>
+      </main>
+    </div>
+
+    <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

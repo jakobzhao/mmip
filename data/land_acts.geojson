@@ -1,0 +1,93 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Treaty of Point Elliott Cession Context",
+        "act_year": 1855,
+        "act_type": "treaty cession",
+        "nations": "Duwamish, Suquamish, Snoqualmie, Snohomish and other Coast Salish signatories",
+        "jurisdiction_effect": "Shifted large areas of present-day King and Snohomish counties into a U.S. treaty and settlement framework while narrowing where tribal authority could be recognized in later state records.",
+        "research_relevance": "Useful for reading urban and county MMIP cases against the longer history of land dispossession and fractured legal geography around Puget Sound.",
+        "source_note": "Illustrative historical context geometry for prototype use only.",
+        "notes": "Replace with research-validated treaty geography and citations before publication."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-123.32, 48.55],
+            [-122.98, 48.62],
+            [-122.44, 48.51],
+            [-121.86, 48.19],
+            [-121.57, 47.71],
+            [-121.66, 47.23],
+            [-122.12, 47.03],
+            [-122.78, 47.12],
+            [-123.18, 47.55],
+            [-123.32, 48.55]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Treaty of Medicine Creek Cession Context",
+        "act_year": 1854,
+        "act_type": "treaty cession",
+        "nations": "Nisqually, Puyallup, Squaxin Island and other signatory communities",
+        "jurisdiction_effect": "Reorganized South Sound territory into settler county and state jurisdictions while later reservation boundaries remained comparatively small and discontinuous.",
+        "research_relevance": "Helps interpret MMIP cases in Tacoma, Olympia, and adjacent counties where tribal, municipal, and county authority overlap unevenly.",
+        "source_note": "Illustrative historical context geometry for prototype use only.",
+        "notes": "Replace with research-validated treaty geography and citations before publication."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-123.24, 47.61],
+            [-122.82, 47.72],
+            [-122.29, 47.67],
+            [-121.88, 47.34],
+            [-121.92, 46.96],
+            [-122.31, 46.84],
+            [-122.86, 46.89],
+            [-123.18, 47.14],
+            [-123.24, 47.61]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Allotment and Fee-Patent Fragmentation Context",
+        "act_year": 1887,
+        "act_type": "allotment era",
+        "nations": "Multiple Western Washington tribal communities",
+        "jurisdiction_effect": "Converted many Indigenous land relationships into checkerboarded parcels and competing administrative categories, complicating later policing and court responsibility.",
+        "research_relevance": "Frames why reservation adjacency does not map cleanly onto the actual jurisdictional conditions surrounding many MMIP cases.",
+        "source_note": "Illustrative regional context geometry for prototype use only.",
+        "notes": "This is a conceptual layer, not a parcel-accurate reconstruction."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-122.88, 48.12],
+            [-122.52, 48.23],
+            [-122.07, 48.18],
+            [-121.89, 47.9],
+            [-122.03, 47.59],
+            [-122.45, 47.47],
+            [-122.77, 47.61],
+            [-122.92, 47.89],
+            [-122.88, 48.12]
+          ]
+        ]
+      }
+    }
+  ]
+}

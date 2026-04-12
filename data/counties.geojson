@@ -1,0 +1,85 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "King County",
+        "state": "Washington",
+        "notes": "Simplified county boundary for prototype map."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-122.55, 47.78],
+            [-121.05, 47.78],
+            [-121.05, 47.08],
+            [-122.55, 47.08],
+            [-122.55, 47.78]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Snohomish County",
+        "state": "Washington",
+        "notes": "Simplified county boundary for prototype map."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-122.45, 48.3],
+            [-121.25, 48.3],
+            [-121.25, 47.78],
+            [-122.45, 47.78],
+            [-122.45, 48.3]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pierce County",
+        "state": "Washington",
+        "notes": "Simplified county boundary for prototype map."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-122.85, 47.4],
+            [-121.35, 47.4],
+            [-121.35, 46.95],
+            [-122.85, 46.95],
+            [-122.85, 47.4]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Whatcom County",
+        "state": "Washington",
+        "notes": "Simplified county boundary for prototype map."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-123.25, 49.0],
+            [-121.7, 49.0],
+            [-121.7, 48.55],
+            [-123.25, 48.55],
+            [-123.25, 49.0]
+          ]
+        ]
+      }
+    }
+  ]
+}
